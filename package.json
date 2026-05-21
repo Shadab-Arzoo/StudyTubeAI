@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
-    "build": "npm --prefix client run build",
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
     "start": "npm --prefix server run start"
   },
   "devDependencies": {
